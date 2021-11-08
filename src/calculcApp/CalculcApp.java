@@ -37,11 +37,33 @@ public class CalculcApp implements ActionListener {
 		addButton = new JButton("+");
 		subButton = new JButton("-");
 		mulButton = new JButton("*");
-		equButton = new JButton("/");
+		divButton = new JButton("/");
 		decButton = new JButton(".");
-		addButton = new JButton("=");
+		equButton = new JButton("=");
 		clrButton = new JButton("Clear");
 		delButton = new JButton("Delete");
+		
+		funcButtons[0] = addButton;
+		funcButtons[1] = subButton;
+		funcButtons[2] = mulButton;
+		funcButtons[3] = divButton;
+		funcButtons[4] = decButton;
+		funcButtons[5] = equButton;
+		funcButtons[6] = clrButton;
+		funcButtons[7] = delButton;
+		
+		for(int i = 0; i<funcButtons.length; i++) {
+			funcButtons[i].addActionListener(this);
+			funcButtons[i].setFont(myFont);
+			funcButtons[i].setFocusable(false);
+		}
+		
+		for(int i = 0; i<numButtons.length; i++) {
+			numButtons[i] = new JButton(String.valueOf(i));
+			numButtons[i].addActionListener(this);
+			numButtons[i].setFont(myFont);
+			numButtons[i].setFocusable(false);
+		}
 		
 		frame.add(textField);
 		frame.setVisible(true);
