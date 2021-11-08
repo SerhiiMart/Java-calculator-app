@@ -1,6 +1,9 @@
 package calculcApp;
 
 import javax.swing.*;
+
+import sun.text.resources.cldr.ext.FormatData_sr_Latn_ME;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -21,9 +24,12 @@ public class CalculcApp implements ActionListener {
 	char operator;
 	
 	CalculcApp(){
-		frame = new JFrame("Calculater");
+		frame = new JFrame("Calculator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(420, 560);
+		frame.setLayout(null);
+		
+		frame.setVisible(true);
 	}
 	
 	public static void main(String[] args) {
