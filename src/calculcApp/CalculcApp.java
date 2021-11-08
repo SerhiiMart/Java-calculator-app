@@ -29,6 +29,21 @@ public class CalculcApp implements ActionListener {
 		frame.setSize(420, 560);
 		frame.setLayout(null);
 		
+		textField = new JTextField();
+		textField.setBounds(50, 25, 300, 60);
+		textField.setFont(myFont);
+		textField.setEditable(false);
+		
+		addButton = new JButton("+");
+		subButton = new JButton("-");
+		mulButton = new JButton("*");
+		equButton = new JButton("/");
+		decButton = new JButton(".");
+		addButton = new JButton("=");
+		clrButton = new JButton("Clear");
+		delButton = new JButton("Delete");
+		
+		frame.add(textField);
 		frame.setVisible(true);
 	}
 	
