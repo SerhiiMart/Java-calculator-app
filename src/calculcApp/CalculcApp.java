@@ -71,6 +71,23 @@ public class CalculcApp implements ActionListener {
 		panel.setLayout(new GridLayout(4, 4, 10, 10));
 		panel.setBackground(Color.gray);
 		
+		panel.add(numButtons[1]);
+		panel.add(numButtons[2]);
+		panel.add(numButtons[3]);
+		panel.add(addButton);
+		panel.add(numButtons[4]);
+		panel.add(numButtons[5]);
+		panel.add(numButtons[6]);
+		panel.add(subButton);
+		panel.add(numButtons[7]);
+		panel.add(numButtons[8]);
+		panel.add(numButtons[9]);
+		panel.add(mulButton);
+		panel.add(decButton);
+		panel.add(numButtons[0]);
+		panel.add(equButton);
+		panel.add(divButton);
+		
 		frame.add(panel);
 		frame.add(delButton);
 		frame.add(clrButton);
