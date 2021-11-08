@@ -2,8 +2,6 @@ package calculcApp;
 
 import javax.swing.*;
 
-import sun.text.resources.cldr.ext.FormatData_sr_Latn_ME;
-
 import java.awt.*;
 import java.awt.event.*;
 
@@ -65,6 +63,11 @@ public class CalculcApp implements ActionListener {
 			numButtons[i].setFocusable(false);
 		}
 		
+		delButton.setBounds(50, 430, 145, 50);
+		clrButton.setBounds(205	, 430, 145, 50);
+		
+		frame.add(decButton);
+		frame.add(clrButton);
 		frame.add(textField);
 		frame.setVisible(true);
 	}
