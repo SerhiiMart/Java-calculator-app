@@ -66,7 +66,13 @@ public class CalculcApp implements ActionListener {
 		delButton.setBounds(50, 430, 145, 50);
 		clrButton.setBounds(205	, 430, 145, 50);
 		
-		frame.add(decButton);
+		panel = new JPanel();
+		panel.setBounds(50, 100, 300, 300);
+		panel.setLayout(new GridLayout(4, 4, 10, 10));
+		panel.setBackground(Color.gray);
+		
+		frame.add(panel);
+		frame.add(delButton);
 		frame.add(clrButton);
 		frame.add(textField);
 		frame.setVisible(true);
