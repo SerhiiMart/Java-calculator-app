@@ -96,12 +96,15 @@ public class CalculcApp implements ActionListener {
 	}
 	
 	public static void main(String[] args) {
-	CalculcApp calc = new CalculcApp();
-
+		CalculcApp calc = new CalculcApp();
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		for(int i = 0; i<10; i++) {
+			if(e.getSource() == numButtons[i]) {
+				
+			}
+		}
 		
 	}
 
