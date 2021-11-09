@@ -102,7 +102,8 @@ public class CalculcApp implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		for(int i = 0; i<10; i++) {
 			if(e.getSource() == numButtons[i]) {
-				
+				textField.setText(textField.getText()
+						.concat(String.valueOf(i)));
 			}
 		}
 		
