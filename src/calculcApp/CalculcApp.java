@@ -9,7 +9,7 @@ public class CalculcApp implements ActionListener {
 	JTextField textField;
 	
 	JButton[] numButtons = new JButton[10]; // Butts for numbers
-	JButton[] funcButtons = new JButton[8]; // Butts for operators
+	JButton[] funcButtons = new JButton[9]; // Butts for operators
 	
 	JButton addButton, subButton, mulButton, divButton;
 	JButton decButton, equButton, clrButton, delButton, negButton;
@@ -37,8 +37,9 @@ public class CalculcApp implements ActionListener {
 		divButton = new JButton("/");
 		decButton = new JButton(".");
 		equButton = new JButton("=");
-		clrButton = new JButton("Clear");
-		delButton = new JButton("Delete");
+		clrButton = new JButton("Clr");
+		delButton = new JButton("Del");
+		negButton = new JButton("Neg");
 		
 		funcButtons[0] = addButton;
 		funcButtons[1] = subButton;
@@ -48,6 +49,7 @@ public class CalculcApp implements ActionListener {
 		funcButtons[5] = equButton;
 		funcButtons[6] = clrButton;
 		funcButtons[7] = delButton;
+		funcButtons[8] = negButton;
 		
 		for(int i = 0; i<funcButtons.length; i++) {
 			funcButtons[i].addActionListener(this);
@@ -62,8 +64,9 @@ public class CalculcApp implements ActionListener {
 			numButtons[i].setFocusable(false);
 		}
 		
-		delButton.setBounds(50, 430, 145, 50);
-		clrButton.setBounds(205	, 430, 145, 50);
+		negButton.setBounds(50, 430, 100, 50);
+		delButton.setBounds(150, 430, 100, 50);
+		clrButton.setBounds(250, 430, 100, 50);
 		
 		panel = new JPanel();
 		panel.setBounds(50, 100, 300, 300);
@@ -87,9 +90,11 @@ public class CalculcApp implements ActionListener {
 		panel.add(equButton);
 		panel.add(divButton);
 		
+		
 		frame.add(panel);
 		frame.add(delButton);
 		frame.add(clrButton);
+		frame.add(negButton);
 		frame.add(textField);
 		frame.setVisible(true);
 	}
