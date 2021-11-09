@@ -1,9 +1,6 @@
 package calculcApp;
 
 import javax.swing.*;
-
-import com.sun.net.httpserver.Authenticator.Result;
-
 import java.awt.*;
 import java.awt.event.*;
 
@@ -11,17 +8,17 @@ public class CalculcApp implements ActionListener {
 	JFrame frame;
 	JTextField textField;
 	
-	Font myFont = new Font("Ink Free", Font.BOLD, 30);
-	
-	JButton[] numButtons = new JButton[10];
-	JButton[] funcButtons = new JButton[8];
+	JButton[] numButtons = new JButton[10]; // Butts for numbers
+	JButton[] funcButtons = new JButton[8]; // Butts for operators
 	
 	JButton addButton, subButton, mulButton, divButton;
-	JButton decButton, equButton, clrButton, delButton;
+	JButton decButton, equButton, clrButton, delButton, negButton;
 	JPanel panel;
 	
 	double num1 = 0, num2 = 0, result = 0;
 	char operator;
+	
+	Font myFont = new Font("Century Gothic", Font.BOLD, 30);
 	
 	CalculcApp(){
 		frame = new JFrame("Calculator");
@@ -152,6 +149,18 @@ public class CalculcApp implements ActionListener {
 			}
 			//operator = '=';
 			textField.setText(String.valueOf(result));
+			num1 = result; //To continue operations
+		}
+		if (e.getSource() == clrButton) {
+			textField.setText("");
+		}
+		if (e.getSource() == delButton) {
+			String str = textField.getText();
+			textField.setText("");
+			for(int i = 0; i < str.length() - 1; i++) {
+				textField.setText(textField.getText() + str
+						.charAt(i));
+			}
 		}
 		
 	}
