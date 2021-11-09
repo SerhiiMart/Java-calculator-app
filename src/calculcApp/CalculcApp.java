@@ -99,12 +99,15 @@ public class CalculcApp implements ActionListener {
 		CalculcApp calc = new CalculcApp();
 	}
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		for(int i = 0; i<10; i++) {
+	public void actionPerformed(ActionEvent e) { //If number button is clicked
+		for(int i = 0; i < numButtons.length; i++) {
 			if(e.getSource() == numButtons[i]) {
 				textField.setText(textField.getText()
 						.concat(String.valueOf(i)));
 			}
+		}
+		if (e.getSource() == decButton) {
+			
 		}
 		
 	}
