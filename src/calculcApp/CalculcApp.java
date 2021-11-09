@@ -167,6 +167,11 @@ public class CalculcApp implements ActionListener {
 						.charAt(i));
 			}
 		}
+		if (e.getSource() == negButton) {
+			double negi = Double.parseDouble(textField.getText());
+			negi *=-1;
+			textField.setText(String.valueOf(negi));
+		}
 		
 	}
 
