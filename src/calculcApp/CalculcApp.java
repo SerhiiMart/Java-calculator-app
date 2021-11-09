@@ -2,6 +2,8 @@ package calculcApp;
 
 import javax.swing.*;
 
+import com.sun.net.httpserver.Authenticator.Result;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -129,6 +131,27 @@ public class CalculcApp implements ActionListener {
 			num1 = Double.parseDouble(textField.getText());
 			operator = '/';
 			textField.setText("");
+		}
+		if (e.getSource() == equButton) { // For operations
+			num2 = Double.parseDouble(textField.getText());
+			switch (operator) {
+			case '+': 
+				result = num1 + num2;
+				break;
+			case '-': 
+				result = num1 - num2;
+				break;
+			
+			case '*': 
+				result = num1 * num2;
+				break;
+			
+			case '/': 
+				result = num1 / num2;
+				break;
+			}
+			//operator = '=';
+			textField.setText(String.valueOf(result));
 		}
 		
 	}
