@@ -103,11 +103,32 @@ public class CalculcApp implements ActionListener {
 		for(int i = 0; i < numButtons.length; i++) {
 			if(e.getSource() == numButtons[i]) {
 				textField.setText(textField.getText()
-						.concat(String.valueOf(i)));
+				.concat(String.valueOf(i)));
 			}
 		}
 		if (e.getSource() == decButton) {
-			
+			textField.setText(textField.getText()
+			.concat(String.valueOf(".")));
+		}
+		if (e.getSource() == addButton) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '+';
+			textField.setText("");
+		}
+		if (e.getSource() == subButton) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '-';
+			textField.setText("");
+		}
+		if (e.getSource() == mulButton) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '*';
+			textField.setText("");
+		}
+		if (e.getSource() == divButton) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '/';
+			textField.setText("");
 		}
 		
 	}
