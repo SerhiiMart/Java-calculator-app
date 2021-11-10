@@ -2,4 +2,6 @@
 
 ### Java simple calculator program with GUI
 
-* Project finished
+* Project finished.
+
+Note : maybe will improve design later.
