@@ -1,4 +1,4 @@
-## Java calculator
+## Basic calculator made with Java
 
 ### Java simple calculator program with GUI
 
